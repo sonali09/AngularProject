@@ -1,0 +1,33 @@
+<div class="container">
+    <br>
+  <div class ="row">
+  <input type="text" [(ngModel)] = 'searchStr' class="border">
+  <i class="fa fa-search" style="transform: translate(-20px,0)"></i>
+  <h6>Details of {{searchStr}} are shown.</h6>
+  <br>
+</div>
+</div>
+<div class="container">
+  <br>
+<table class="table table-striped" border="2px">
+  <tr class="textStyl">
+    <th>Name</th>
+    <th>Location</th>
+    <th>Contact Number</th>
+    <th>Blood Group</th>
+    <th>More Details</th>
+  </tr>
+  <tr *ngFor="let eachDonor of donorList | filter :'bloodGrp' :searchStr">
+      <td>{{eachDonor.name}}</td>
+      <td>{{eachDonor.location}}</td>
+      <td>{{eachDonor.mobNumber}}</td>
+      <td>{{eachDonor.bloodGrp}}</td>
+      <td align="center">
+        <button class="button" [disabled]="disableShowButton" (click)='showDetails(eachDonor.name)'>Show Details</button>
+      </td>
+  </tr>
+</table>
+</div>
+<div class="container">
+  <h6>{{details}}</h6>
+</div>

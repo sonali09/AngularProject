@@ -1,0 +1,35 @@
+.icon-thumbnailSmall{
+    height: 80px;
+    width: 80px;
+}
+.icon-thumbnailLarge{
+    height: 110px;
+    width: 347px;
+    transition: width 5s;
+}
+.card{
+    width: 100px;
+}
+.button {
+    padding: 10px 10px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color:green;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .form-control{
+      width: 500px;
+  }

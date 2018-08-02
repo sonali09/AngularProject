@@ -1,0 +1,32 @@
+<app-banner></app-banner>
+<div class="container">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-header">Active Donors</div>
+      <div class="card-img-top"><img src={{childImage}} alt="BannerImg" appMagnify></div>
+        <div class = "card-body row">
+          <p appHighlight fontSize='3em' bgColor='Brown' fontFamily='Verdana'>{{dnrCount}}</p>        
+        </div>
+          <button class= "fa fa-plus-circle" (click)='changeDnrCount()'></button>
+    </div>
+    <div class="card">  
+      <div class="card-header">Past Camps</div>
+        <div #pastComp>
+          </div>
+    <button class= "fa fa-plus-circle" (click)="addComp('past')">Add Past Component</button> 
+  </div>   
+  <div class="card">
+    <div class="card-header">Future Camps</div>
+    <div #futureComp>
+    </div>  
+    <button class= "fa fa-plus-circle" (click)="addComp('future')">Add Future Component</button>  
+  </div> 
+  </div>
+  <br>
+  <div class="form-group">
+  <div class="row">
+      <input type="text" [(ngModel)]= 'userReview' class="form-control">
+      <button class= "button" (click)='newMessage()'>Add New Review</button> 
+  </div>
+</div>
+</div>

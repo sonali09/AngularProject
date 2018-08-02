@@ -1,0 +1,9 @@
+.form-control{
+    border: 2px solid blueviolet;
+    border-radius: 5px 5px 5px 5px;
+}
+.label-info{
+    font-style: italic;
+    color: blue;
+    font-size: 10;
+}

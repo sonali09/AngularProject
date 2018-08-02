@@ -1,0 +1,20 @@
+<div class="container form-group">
+<div>
+  <label class="label-info">Enter Location:</label>
+  <input type ="text" [(ngModel)]='loc' class="form-control">
+</div>
+<div>
+  <label class="label-info">Required on Date:</label>
+  <input type="date" [(ngModel)]='rDate' class="form-control">
+</div>
+<div>
+    <label class="label-info">Select Blood Group:</label>
+    <select [(ngModel)]='rGrp' class="form-control">
+      <option *ngFor='let grp of availBG'
+      [value]='grp'>{{grp}}</option>
+    </select>
+</div>
+<br>
+<app-request-details [reqGroup]="rGrp" [reqDate] = "rDate" [reqLoc] ="loc" (response) ="onChange($event)"></app-request-details>
+<div>{{res}}</div>
+</div>
