@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <th>Camp City</th>
+    <th>Camp Date</th>
+    <th>Estimate</th>
+  <tr *ngFor="let eachCamp of upcoming">
+    <td>
+      {{eachCamp.loc | uppercase}}
+    </td>
+    <td>
+      {{eachCamp.cmDate | date:'short'}}
+    </td>
+    <td>
+      {{eachCamp.estimate | currency:'INR':'symbol':'5.2-2'}}
+    </td>
+  </tr>
+</table>

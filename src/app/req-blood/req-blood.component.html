@@ -1,0 +1,45 @@
+<form #frm="ngForm" (ngSubmit)='submit()' ngNativeValidate>
+  <div class="container form-group">
+    <table>
+      <tr>
+        <td>
+    <div>
+      <label for=""><h6>ID</h6></label>
+      <input type="text" [(ngModel)]='bloodReqForm.id' name='id' class="form-control">
+    </div>
+  </td><td>
+    <div>
+      <label for=""><h6>Patient Name</h6></label>
+      <input type="text" [(ngModel)]='bloodReqForm.patientName' minlength="5" #name="ngModel" name='patientName' required class="form-control">
+      <small [hidden]="name.valid || (name.touched  && !frm.submitted)">Patient name is mandatory for requesting.</small>
+    </div>
+  </td>
+  </tr>
+<br>
+  <tr><td>
+    <div>
+      <label for=""><h6>Required On</h6></label>
+      <input type="datetime" [(ngModel)]='bloodReqForm.whenReq' name='whenReq' class="form-control">
+    </div>
+  </td><td>
+    <div>
+      <label for=""><h6>Hospital Name</h6></label>
+      <input type="text" [(ngModel)]='bloodReqForm.hospitalName' name='hospitalName' class="form-control">
+    </div>
+  </td>
+  </tr>
+  <br>
+  <tr><td>
+    <div>
+      <label for=""><h6>City</h6></label>
+      <input type="text" [(ngModel)]='bloodReqForm.city' name='city' required class="form-control">
+    </div>
+  </td><td>
+    <div>
+      <label for=""></label>
+      <input type="submit" value="Submit" class="btn bt-danger">
+    </div>
+  </td></tr>
+  </table>
+  </div>
+</form>

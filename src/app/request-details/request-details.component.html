@@ -1,0 +1,14 @@
+<div class="container label-info" *ngIf='show'>
+<p>
+  Required at Location: {{reqLoc}}
+</p>
+<p>
+  Required Blood Group: {{reqGroup}}
+</p>
+<p> 
+  Required on Date: {{reqDate}}
+</p>
+</div>
+<div>
+  <button class="button" (click)="sendRes()">Request</button>
+</div>

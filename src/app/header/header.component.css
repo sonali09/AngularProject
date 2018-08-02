@@ -1,0 +1,19 @@
+.img-thumbnail{
+    height: 150px;
+    width: 550px;
+}
+.textSty{
+    text-align: center;
+    color: rgb(124, 13, 37);
+    font-style: italic;
+}
+.container{
+    height: 150px;
+    background-image: linear-gradient(#ffff00, #ffa500, red, green);
+}
+
+.border{
+    border: 10px;
+    border-color: blue;
+    border-radius: 50px 50px;
+}

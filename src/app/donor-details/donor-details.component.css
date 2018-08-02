@@ -1,0 +1,31 @@
+.textStyl{
+    text-align: center;
+}
+.border{
+    border-width: 10px;
+    border-color: blue;
+    border-radius: 7px 7px 7px 7px;
+}
+.button {
+    padding: 10px 10px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color:green;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .table{
+      height: 200px;
+  }
