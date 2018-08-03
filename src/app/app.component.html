@@ -1,13 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
+    <div class="container"> 
     <app-header></app-header>
+    <ul>
+        <li>
+        <a [routerLink]="['/donorDetails']">Donor Details</a>
+        <a [routerLink]="['/showReq']">Show Requests</a>
+        <a [routerLink]="['/dnrDashboard']">Donor Dashboard</a>
+        <a [routerLink]="['/reviews']">Reviews</a>
+        <a [routerLink]="['/reqBlood']">Request Blood</a>
+        </li>
+    </ul>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+            
+</div>
+
+<!--        
     <app-donor-details></app-donor-details>
     <app-show-request></app-show-request>
     <app-donor-dashboard></app-donor-dashboard>
     <app-reviews></app-reviews>
-    <app-req-blood></app-req-blood>
-    <app-footer></app-footer>
-
-
+    <app-req-blood></app-req-blood>-->
 
 
 

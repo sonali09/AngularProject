@@ -7,6 +7,26 @@
   <br>
 </div>
 </div>
+<br>
+<div class="form" *ngIf='!edit'>
+  <form #frm="ngForm" (ngSubmit)='submit()'>
+    <div>
+    <label for="">ID</label>
+    <input type="text" [(ngModel)]='donor.id' name="id" class="form-control">
+    <label for="">Name</label>
+    <input type="text" [(ngModel)]='donor.name' name = "name" class="form-control">
+    <label for="">Location</label>
+    <input type="text" [(ngModel)]='donor.location' name ="location" class="form-control">
+    <label for="">Mobile Number</label>
+    <input type="text" [(ngModel)]='donor.mobNumber' name="mobNumber" class="form-control">
+    <label for="">Blood Group</label>
+    <input type="text" [(ngModel)]='donor.bloodGrp' name = "bloodGrp" class="form-control">
+    <br>
+    <input type="submit">
+  </div>
+  </form>
+</div>
+
 <div class="container">
   <br>
 <table class="table table-striped" border="2px">
@@ -17,17 +37,37 @@
     <th>Blood Group</th>
     <th>More Details</th>
   </tr>
-  <tr *ngFor="let eachDonor of donorList | filter :'bloodGrp' :searchStr">
+  <tr *ngFor="let eachDonor of donorList | filter :'bloodGrp' :searchStr  let idx=index">
       <td>{{eachDonor.name}}</td>
       <td>{{eachDonor.location}}</td>
       <td>{{eachDonor.mobNumber}}</td>
       <td>{{eachDonor.bloodGrp}}</td>
       <td align="center">
         <button class="button" [disabled]="disableShowButton" (click)='showDetails(eachDonor.name)'>Show Details</button>
+        <button class="button" [disabled]="disableShowButton" (click)='onEditClick(eachDonor)'>Edit Details</button>
+        <button class="button" [disabled]="disableShowButton" (click)='deleteDetails(eachDonor, idx)'>Delete</button>
       </td>
   </tr>
 </table>
 </div>
-<div class="container">
+<div class="form" *ngIf = 'edit'>
+  <form #frm="ngForm" (ngSubmit)='editDetails(donor)'>
+    <div>
+    <label for="">ID</label>
+    <input type="text" [(ngModel)]='donor.id' name="id" class="form-control">
+    <label for="">Name</label>
+    <input type="text" [(ngModel)]='donor.name' name = "name" class="form-control">
+    <label for="">Location</label>
+    <input type="text" [(ngModel)]='donor.location' name ="location" class="form-control">
+    <label for="">Mobile Number</label>
+    <input type="text" [(ngModel)]='donor.mobNumber' name="mobNumber" class="form-control">
+    <label for="">Blood Group</label>
+    <input type="text" [(ngModel)]='donor.bloodGrp' name = "bloodGrp" class="form-control">
+    <br>
+    <input type="submit">
+  </div>
+  </form>
+</div>
+<div class="container badge-dark">
   <h6>{{details}}</h6>
 </div>
